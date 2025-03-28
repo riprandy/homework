@@ -4,6 +4,10 @@
     #include <sys/socket.h>
 #include <sys/wait.h>
 #include <cstring>
+
+#define MAX_PLAYERS 100
+
+
     struct Player{ 
         char player_character ;
         int player_total_argument_count;
@@ -12,8 +16,23 @@
 
 
 
-    int main(){
 
+
+    void setup_pipes(int player_count, int (&pipes)[MAX_PLAYERS][2]) {
+        for (int i = 0; i < player_count; i++) {
+            if (socketpair(AF_UNIX, SOCK_STREAM, PF_UNIX, pipes[i]) == -1) {
+                perror("socketpair failed");
+                exit(1);
+            }
+        }
+
+    }
+
+
+    
+
+    int main(){
+    int pipes[MAX_PLAYERS][2];
     int grid_width;
     int grid_height; 
     int streak_size;
@@ -40,9 +59,7 @@
 
     }
 
-    std::cout<< player_array[3].player_character<< std::endl;
-    
-
+   
     return 0 ;
 
     }

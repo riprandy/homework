@@ -1,0 +1,81 @@
+hi. im back again. 336 homework failed miserably and i have nothing.. to say. 
+i was stuck at how to put numbers in the memory - well i wasn't really stuck but i didn't understand how could
+i just put numbers randomly in the memory. i thpught it was stupid
+but still i had some problems with waits and the whole logic. anyways. i felt really bad tho. like idk it was rreally bad. 
+
+
+
+but anyways i have 8 days i guess. now ill work on this homework and finish it as soon as possible since
+i have another homework due on the same day. 
+
+lets go. 
+
+mistakes i did in that homework- 
+being stuck and not trying things
+not asking assistants
+not asking help from chat. please use it. i know its fun sometimes to do it on your own but you have to finish this homework anyways .
+
+
+========================================================================================================================================
+
+first lets read the text
+
+IPC = interprocess communication 
+
+if entire grid is filled but no streak = draw 
+row column diagonal 
+real time not ordered 
+
+stdin will read the game config 
+bidirectional pipes to build communication between players 
+okay here's what it says 
+
+
+
+• Reading the game configuration (grid size, streak size, player details) from stdin. okay i get this 
+• Creating bidirectional pipes to communicate with each player process.---> ask chat
+• Forking and executing each player process, redirecting their stdin and stdout to these pipes  -->ask chat
+
+Managing messages from players:
+– START: Indicates a player has begun execution; the server should respond with the current
+game state.
+– MARK: Sent when a player attempts to mark a specific point on the grid. The server checks
+if the move is valid and updates the game state accordingly.
+• Determining when a player has won by achieving the streak size or when the game ends in a draw,
+and notifying all players.
+1
+• Reaping child processes to avoid zombies. i kinda know this one but why do i create child processes 
+
+
+
+okay so in the message part i forgot about typedef and Enum so i dont want that to happen again
+
+typedef- defines type 
+
+typedef Int int 
+
+typedef struct Mystruct{} person ; you can use it as -> person x rather than struct mystruct = .. 
+
+
+==================================================================================================
+
+
+so I did the input taking part, and then I tried to run it but there were some problems
+with the compilation 
+so I then checked online 
+- permission denied error = the same program is running in the background. check the task manager and remove them 
+- then i installed wsl and now I can give my program inputs but it gives segmentation fault.
+
+now I am trying to see what the problem is so I debug but I dont know how to use debugger
+with a file input. So ill search up that. ILL CHECK ON THAT LATER I HAVE 2 HOMEWORKS AND THE 336 HOMEWORK DEADLINE EXTENDED I STILL HAVE CHANCE. 
+
+in cpp io is buffered and if you dont put endl it wont flush the output buffer immediately after the line
+another thing - debugger forces the flush maybe idk chat said taht 
+- 
+
+okay when i try to open using remote wsl with a previous folder that i used on windows it switches back to windows 	
+
+==============================
+3/23/25 10:27 am 
+
+finally. i am using wsl and git together because idk how to use local files or carry them to my local computer but its better this way. 
