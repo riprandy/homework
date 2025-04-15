@@ -1,30 +1,29 @@
 # Compiler and flags
-CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++17 -g
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c99 -g
 
 # Target executable
 TARGET = server
 
 # Source files
-SRCS = server.cpp game_logic.cpp message_handler.cpp
+SRCS = server.c print_output.c
 
-# Object files (automatically generated from source files)
-OBJS = $(SRCS:.cpp=.o)
+# Object files
+OBJS = $(SRCS:.c=.o)
 
 # Default target
 all: $(TARGET)
 
-# Rule to build the target executable
+# Link all object files into the final executable
 $(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
 
-# Rule to compile source files into object files
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+# Compile each .c file into a .o file
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-# Clean up build files
+# Clean up
 clean:
 	rm -f $(OBJS) $(TARGET)
 
-# Phony targets (not actual files)
 .PHONY: all clean

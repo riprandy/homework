@@ -79,3 +79,16 @@ okay when i try to open using remote wsl with a previous folder that i used on w
 3/23/25 10:27 am 
 
 finally. i am using wsl and git together because idk how to use local files or carry them to my local computer but its better this way. 
+===========================================================================
+alright i use git to store files and create etc i dont know how to transfer
+files between two different os' 
+
+i have at most 2 days and if i finish this today i get 95 and if tomorrow 80 and then 55
+
+so lets begin 
+4/14/25
+12:11 pm 
+
+i know about pipes and bidirectional ones
+alright not much to talk about ill just try reading the chat code 
+ty
